@@ -38,7 +38,7 @@ Tuple king_movements[MAX_KING_POSSIBLE_MOVEMENTS] =
     {.x = 1, .y = -1},  // diag2
     {.x = 1, .y = 0},   // horz2
     {.x = 1, .y = 1},   // diag3
-    {.x = 0, .y = -1}    // vert1
+    {.x = 0, .y = -1}   // vert1
 };
 
 Tuple knight_movements[MAX_KNIGHT_POSSIBLE_MOVEMENTS] =
@@ -171,7 +171,7 @@ Tuple pawn_p2_eat_movements[2] =
     {.x = 1, .y = 1}
 };
 
-Tuple king_p1 = {.x = 3, .y = 7};
+Tuple king_p1 = {.x = 4, .y = 7};
 Tuple king_p2 = {.x = 4, .y = 0};
 
 int current_player = 0b10000000;
@@ -343,8 +343,8 @@ void getPossibleMovements(uint8_t piece, int i, int j)
                     && ((game_state[i + king_movements[n].y][j + king_movements[n].x] == EMPTY) 
                     || (isEnemyTeam(piece, game_state[i + king_movements[n].y][j + king_movements[n].x]))))
                 {
-                    possible_movements[k].y = j + king_movements[n].y;
-                    possible_movements[k].x = i + king_movements[n].x;
+                    possible_movements[k].y = i + king_movements[n].y;
+                    possible_movements[k].x = j + king_movements[n].x;
                     
                     game_state[i][j] = EMPTY;
                     uint8_t eaten_piece = game_state[possible_movements[k].y][possible_movements[k].x];
