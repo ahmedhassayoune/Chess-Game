@@ -6,6 +6,8 @@ This is a C implemented Chess Game using SDL
 
 ```bash
 make all
+```
+```bash
 ./main
 ```
 
