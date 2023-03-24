@@ -9,5 +9,3 @@ make all
 ```bash
 ./main
 ```
-
-by Ahmed Hassayoune
