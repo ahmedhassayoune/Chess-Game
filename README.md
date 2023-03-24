@@ -1,8 +1,7 @@
 # Chess-Game
 This is a C implemented Chess Game using SDL
 
-# How to launch the game?
--> Run the following commands
+# How to start the game?
 
 ```bash
 make all
